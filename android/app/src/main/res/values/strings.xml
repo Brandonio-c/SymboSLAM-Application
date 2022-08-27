@@ -1,0 +1,4 @@
+<resources>
+    <string name="SS_app_name" translation_description="Symbolic SLAM application - Edge Agent [CHAR_LIMIT=40]">SymboSLAM</string>
+    <string name="tfe_od_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
+</resources>

@@ -1,0 +1,53 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.tensorflow.lite.examples.symboslam">
+
+    <uses-sdk />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <permission
+        android:name="org.tensorflow.lite.examples.symboslam.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="org.tensorflow.lite.examples.symboslam.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/SS_app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.ObjectDetection">
+
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCX3nO7f2cmQQ-EhMaQf3WsU5w52n2dYrw"/>
+
+
+        <activity
+            android:name="org.tensorflow.lite.examples.symboslam.GPSActivity"
+            android:label="@string/SS_app_name"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="org.tensorflow.lite.examples.symboslam.DetectorActivity"
+            android:label="@string/SS_app_name"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="org.tensorflow.lite.examples.symboslam.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
